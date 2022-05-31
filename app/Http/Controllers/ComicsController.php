@@ -40,7 +40,19 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // la "richiesta" (parametro della funzione) fatta al server attraverso il form (POST) presente nella CREATE e contenente le informazioni scritte negli input
+        $data = $request->all();
+
+        // nuova istanza 
+        $new_comic = new Comic();
+        
+        // salvare le informazioni passate nel "$fillable"
+        $new_comic->fill($data);
+        $new_comic->save();
+
+        // dopo aver inviato il form si viene reindirizzati alla SHOW dell'elemento creato
+        return redirect()->route('comics.show', $new_comic);
+
     }
 
     /**
