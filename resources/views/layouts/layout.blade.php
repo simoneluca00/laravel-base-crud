@@ -17,7 +17,9 @@
 </header>
 
 <main>
-    @yield('content')
+    <div class="container py-5">
+        @yield('content')
+    </div>
 </main>
     
 <!-- script Bootstrap 5 -->

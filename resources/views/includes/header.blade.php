@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">COMICS</a>
+      <a class="navbar-brand" href="#">DC COMICS</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -16,7 +16,7 @@
             {{-- <a class="nav-link {{ Request::route()->getName() == 'contacts' ? 'text-primary fw-bold' : '' }}" href=" {{route('contacts')}} ">Contacts</a> --}}
           </li>
           <li class="nav-item">
-            {{-- <a class="nav-link {{ Request::route()->getName() == 'houses' || Request::route()->getName() == 'house' ? 'text-primary fw-bold' : '' }}" href=" {{route('houses')}} ">Houses</a> --}}
+            <a class="nav-link {{ Request::route()->getName() == 'comics.index' || Request::route()->getName() == 'comics.show' || Request::route()->getName() == 'comics.create' ? 'text-primary fw-bold' : '' }}" href=" {{route('comics.index')}} ">Comics</a>
           </li>
         </ul>
       </div>

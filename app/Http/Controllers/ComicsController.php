@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Comic;
+
 class ComicsController extends Controller
 {
     /**
@@ -13,7 +15,10 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        //
+        $comics = Comic::all();
+
+        return view('pages.comics.index', compact('comics'));
+        
     }
 
     /**
@@ -21,9 +26,10 @@ class ComicsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // va a recuperare la pagina dove ci sarà solo il form
     public function create()
     {
-        //
+        return view('pages.comics.create');
     }
 
     /**
@@ -43,9 +49,11 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
-        //
+
+        // passando il Model riferito all'entità più una variabile si va a sostituire la scrittura con il findOrFail() -> struttura rivisitata -> "id" passato dalla rotta
+        return view('pages.comics.show', compact('comic'));
     }
 
     /**
