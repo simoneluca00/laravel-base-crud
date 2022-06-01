@@ -16,7 +16,7 @@
             {{-- <a class="nav-link {{ Request::route()->getName() == 'contacts' ? 'text-primary fw-bold' : '' }}" href=" {{route('contacts')}} ">Contacts</a> --}}
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ Request::route()->getName() == 'comics.index' || Request::route()->getName() == 'comics.show' || Request::route()->getName() == 'comics.create' ? 'text-primary fw-bold' : '' }}" href=" {{route('comics.index')}} ">Comics</a>
+            <a class="nav-link {{ Request::route()->getName() == 'comics.index' || Request::route()->getName() == 'comics.show' || Request::route()->getName() == 'comics.create' || Request::route()->getName() == 'comics.edit' ? 'text-primary fw-bold' : '' }}" href=" {{route('comics.index')}} ">Comics</a>
           </li>
         </ul>
       </div>

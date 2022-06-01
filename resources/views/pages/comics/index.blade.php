@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Characters')
+@section('title', 'Comics')
     
 @section('content')
 
@@ -17,7 +17,10 @@
                 <div class="card-body d-flex flex-column justify-content-between">
                   <h5 class="card-title">{{ $comic->title }}</h5>
                   <h6 class="card-subtitle my-3">{{ $comic->series }}</h6>
-                  <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary">View Info</a>
+                  <div class="d-flex flex-column">
+                      <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary my-1">View Info</a>
+                      <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-warning my-1">Edit Info</a>
+                  </div>
                 </div>
               </div>
            </div>

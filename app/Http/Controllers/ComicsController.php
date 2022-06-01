@@ -50,7 +50,7 @@ class ComicsController extends Controller
         $new_comic->fill($data);
         $new_comic->save();
 
-        // dopo aver inviato il form si viene reindirizzati alla SHOW dell'elemento creato
+        // dopo aver inviato il form si viene reindirizzati alla SHOW dell'elemento creato -> il metodo POST non ci permette di fare il "return" di una vista -> c'è bisogno del REDIRECT
         return redirect()->route('comics.show', $new_comic);
 
     }
@@ -74,9 +74,9 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comic $comic)
     {
-        //
+        return view( 'pages.comics.edit', compact('comic') );
     }
 
     /**
@@ -86,9 +86,12 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $data = $request->all();
+        $comic->update($data);
+
+        return redirect()->route( 'comics.show', $comic );
     }
 
     /**
