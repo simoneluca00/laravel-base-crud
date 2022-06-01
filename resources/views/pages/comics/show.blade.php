@@ -4,10 +4,12 @@
     
 @section('content')
 
+@include('includes.messages.success')
+
 <div class="w-75 mx-auto">
 
     <div class="d-flex justify-content-center mb-5">
-        <img src="{{$comic->thumb}}" alt="cover di {{$comic->title}}">
+        <img src="{{$comic->thumb}}" alt="cover di {{$comic->title}}" width="200px" height="300px">
         <div class="ms-4">
             <h4>
                 {{$comic->title}}
