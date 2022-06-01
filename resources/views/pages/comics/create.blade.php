@@ -4,6 +4,9 @@
 
 @section('content')
 
+@include('includes.validation.errors')
+
+
 {{-- per comunicare in modo corretto con la view STORE deve essere utilizzato il metodo POST --}}
 {{-- l'attributo ACTION dovrà avere come parametro la rotta della view STORE --}}
 <form action="{{route('comics.store')}}" method="POST">

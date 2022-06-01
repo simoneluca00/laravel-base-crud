@@ -40,6 +40,19 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
+        // VALIDAZIONE BACK-END
+        $request->validate(
+            [
+                'title'=> 'required|max:100|unique:comics',
+                'description'=> 'required',
+                'thumb'=> 'required|url|unique:comics',
+                'price'=> 'required|integer',
+                'series'=> 'required|max:100',
+                'sale_date'=> 'required|date',
+                'type'=> 'required|max:100',
+            ]
+        );
+
         // la "richiesta" (parametro della funzione) fatta al server attraverso il form (POST) presente nella CREATE e contenente le informazioni scritte negli input
         $data = $request->all();
 
@@ -88,6 +101,19 @@ class ComicsController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        // VALIDAZIONE BACK-END
+        $request->validate(
+            [
+                'title'=> 'required|max:100|unique:comics',
+                'description'=> 'required',
+                'thumb'=> 'required|url|unique:comics',
+                'price'=> 'required|integer',
+                'series'=> 'required|max:100',
+                'sale_date'=> 'required|date',
+                'type'=> 'required|max:100',
+            ]
+        );
+
         $data = $request->all();
         $comic->update($data);
 

@@ -4,6 +4,9 @@
     
 @section('content')
 
+    @include('includes.validation.errors')
+
+
     <form action="{{route('comics.update', $comic->id)}}" method="POST">
 
     @method('PUT')
