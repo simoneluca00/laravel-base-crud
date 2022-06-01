@@ -30,5 +30,8 @@
     
 {{-- script Bootstrap 5 --}}
 <script src=" {{ asset('./js/app.js') }} "></script>
+
+@yield('delete-confirm')
+
 </body>
 </html>
