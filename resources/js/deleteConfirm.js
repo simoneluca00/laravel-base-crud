@@ -5,7 +5,7 @@ const deleteForms = document.querySelectorAll('.deleteForm');
 deleteForms.forEach(element => {
 
     // salvare il valore di title di ogni comic attraverso l'attributo "data-name="{{$comic->title}}""
-    const name = element.getAttribute('data-name');
+    const title = element.getAttribute('data-name');
 
     // quando si verifica l'evento "submit" del singolo "btn sumbit trash" (non facendo ricaricare la pagina con "preventDefault()")
     element.addEventListener('submit', (el)=> {

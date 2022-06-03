@@ -97,7 +97,7 @@
 var deleteForms = document.querySelectorAll('.deleteForm');
 deleteForms.forEach(function (element) {
   // salvare il valore di title di ogni comic attraverso l'attributo "data-name="{{$comic->title}}""
-  var name = element.getAttribute('data-name'); // quando si verifica l'evento "submit" del singolo "btn sumbit trash" (non facendo ricaricare la pagina con "preventDefault()")
+  var title = element.getAttribute('data-name'); // quando si verifica l'evento "submit" del singolo "btn sumbit trash" (non facendo ricaricare la pagina con "preventDefault()")
 
   element.addEventListener('submit', function (el) {
     el.preventDefault(); // con il metodo "confirm('stringa')" viene visualizzata una finestra di dialogo con un messaggio, un btn "OK" e un btn "ANNULLA"
