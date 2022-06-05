@@ -35,20 +35,20 @@
 
    @endif
 
-    <div class="container-fluid {{ Request::route()->getName() == 'comics.index' || Request::route()->getName() == 'home' || Request::route()->getName() == 'aboutUs' || Request::route()->getName() == 'news' || Request::route()->getName() == 'contacts' ? 'bg_main_cust' : '' }} {{ Request::route()->getName() == 'comics.show' ? 'p-0' : 'p-5'}}">
+    <div class="container-fluid {{ Request::route()->getName() == 'comics.index' || Request::route()->getName() == 'characters.index' || Request::route()->getName() == 'home' || Request::route()->getName() == 'aboutUs' || Request::route()->getName() == 'news' || Request::route()->getName() == 'contacts' ? 'bg_main_cust' : '' }} {{ Request::route()->getName() == 'comics.show' ? 'p-0' : 'p-5'}}">
 
         @yield('content')
     </div>
 
-    {{-- blocco con 5 links del <main> e background primary presente solo in alcune views --}}
-   @if (Request::route()->getName() == 'comics.index' || Request::route()->getName() == 'home' || Request::route()->getName() == 'aboutUs' || Request::route()->getName() == 'news' || Request::route()->getName() == 'contacts')
+    {{-- blocco con 5 links del <main> e background primary presente in tutte le views, eccetto le show --}}
+   @if (Request::route()->getName() == 'home' || Request::route()->getName() == 'aboutUs' || Request::route()->getName() == 'news' || Request::route()->getName() == 'contacts' || Request::route()->getName() == 'comics.index' || Request::route()->getName() == 'comics.create' || Request::route()->getName() == 'comics.edit' || Request::route()->getName() == 'characters.index' || Request::route()->getName() == 'characters.create' || Request::route()->getName() == 'characters.edit' )
        
     @include('includes.Mainlinks._primary')
 
    @endif
 
-   {{-- blocco con 4 links del <main> e background secondary presente solo nelle rotte show --}}
-   @if (Request::route()->getName() == 'comics.show')
+   {{-- blocco con 4 links del <main> e background secondary presente solo nelle rotte show di ogni resource controller --}}
+   @if (Request::route()->getName() == 'comics.show' || Request::route()->getName() == 'characters.show')
        
     @include('includes.Mainlinks._secondary')
 

@@ -13,8 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Rotte dinamiche (a una singola pagina seguono diverse pagine con più azioni)
+// Rotte dinamiche (a una singola pagina seguono diverse pagine con più azioni) -> comics
 Route::resource('comics', 'ComicsController' );
+
+// Rotte dinamiche (a una singola pagina seguono diverse pagine con più azioni) -> characters
+Route::resource('characters', 'CharactersController' );
 
 // Rotte statiche (non si ha bisogno di creare un Model)
 Route::get( '/', 'PageController@home' )->name('home');

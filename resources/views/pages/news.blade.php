@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Home')
+@section('title', 'News')
 
 @section('content')
     <div class="row text-center">
