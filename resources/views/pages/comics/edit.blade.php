@@ -4,14 +4,18 @@
     
 @section('content')
 
-    @include('includes.validation.errors')
+@include('includes.validation.errors')
+
+    <h2 class="text-primary text-center mb-5">Edit 
+        <a href="{{route('comics.show', $comic->id)}}">{{ $comic->title }}</a>
+    </h2>
 
 
     <form action="{{route('comics.update', $comic->id)}}" method="POST">
 
-    @method('PUT')
+        @method('PUT')
 
-    @csrf
+        @csrf
 
         <div class="my-4">
             <label for="comicTitle" class="form-label">Modifica il titolo:</label>

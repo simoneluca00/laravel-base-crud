@@ -1,0 +1,50 @@
+// SECTION BACKGROUND
+
+.bg_main_cust {
+    background-color: rgb(28, 28, 28);
+}
+
+.bg_green_cust {
+    background-color: #55ba59;
+    color: #a7fb9b;
+}
+
+// !SECTION BACKGROUND
+
+// SECTION FONT
+
+.f_fam_default {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.f_fam_cust {
+    font-family: "Bebas Neue", cursive;;
+}
+
+.fs_small_cust {
+    font-size: 0.9em;
+}
+
+// !SECTION FONT
+
+// SECTION TEXT
+
+.text_overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text_gray_cust {
+    color: dimgray;
+}
+
+.text_footer_link {
+    color: #839294 !important;
+}
+
+.text_show_cust {
+    color: #003f5e;
+}
+
+// !SECTION TEXT

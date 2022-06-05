@@ -1,0 +1,19 @@
+.grid_responsive_index {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.grid_responsive_links {
+    display: grid;
+    // grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, .5fr));
+}
+
+#hero {
+    height: 40vh;
+    min-height: 330px;
+    background-image: url("../images/jumbotron.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,11 +1,12 @@
 @extends('layouts.layout')
 
-@section('title', 'Create Character')
+@section('title', 'Create Comic')
 
 @section('content')
 
 @include('includes.validation.errors')
 
+<h2 class="text-primary text-center mb-5">Create new comic</h2>
 
 {{-- per comunicare in modo corretto con la view STORE deve essere utilizzato il metodo POST --}}
 {{-- l'attributo ACTION dovrà avere come parametro la rotta della view STORE --}}
@@ -21,7 +22,7 @@
     </div>
     <div class="my-4 d-flex flex-column">
         <label for="comicDescription" class="form-label">Inserisci la descrizione:</label>
-        <textarea id="comicDescription" name="description" rows="6" placeholder="Descrizione" required >{{old('description')}}</textarea>
+        <textarea id="comicDescription" name="description" class="p-2" rows="6" placeholder="Descrizione" required >{{old('description')}}</textarea>
     </div>
     <div class="my-4">
         <label for="comicThumb" class="form-label">Inserisci l'url della cover:</label>

@@ -4,6 +4,6 @@
 
 @section('content')
     <div class="row text-center">
-        <h1>Sono la pagina CONTACTS</h1>
+        <h1 class="text-light">Sono la pagina CONTACTS</h1>
     </div>
 @endsection

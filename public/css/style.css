@@ -1,18 +1,93 @@
+@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);.bg_main_cust {
+  background-color: rgb(28, 28, 28);
+}
+
+.bg_green_cust {
+  background-color: #55ba59;
+  color: #a7fb9b;
+}
+
+.f_fam_default {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.f_fam_cust {
+  font-family: "Bebas Neue", cursive;
+}
+
+.fs_small_cust {
+  font-size: 0.9em;
+}
+
 .text_overflow {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.fa-circle-info:hover {
+.text_gray_cust {
+  color: dimgray;
+}
+
+.text_footer_link {
+  color: #839294 !important;
+}
+
+.text_show_cust {
+  color: #003f5e;
+}
+
+.card_cust:hover {
+  border: 3px solid #0d6efd;
+}
+
+.info_cust:hover {
   color: #0d6efd !important;
 }
 
-.fa-pen-to-square:hover {
+.edit_cust:hover {
   color: #ffc107 !important;
 }
 
-.fa-trash:hover {
+.delete_cust:hover {
   color: #dc3545 !important;
 }
 
+footer li a:hover {
+  text-decoration: underline !important;
+  color: #0d6efd !important;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.fa-magnifying-glass {
+  left: 0 !important;
+  bottom: 13px !important;
+}
+
+.grid_responsive_index {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.grid_responsive_links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 0.5fr));
+}
+
+#hero {
+  height: 40vh;
+  min-height: 330px;
+  background-image: url("../images/jumbotron.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer_top_cust {
+  background-image: url("../images/footer-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

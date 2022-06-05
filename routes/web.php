@@ -20,3 +20,4 @@ Route::resource('comics', 'ComicsController' );
 Route::get( '/', 'PageController@home' )->name('home');
 Route::get( '/aboutUs', 'PageController@aboutUs' )->name('aboutUs');
 Route::get( '/contacts', 'PageController@contacts' )->name('contacts');
+Route::get( '/news', 'PageController@news' )->name('news');

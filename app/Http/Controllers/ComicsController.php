@@ -16,7 +16,7 @@ class ComicsController extends Controller
     public function index()
     {
         $comics = Comic::all();
-
+        
         return view('pages.comics.index', compact('comics'));
         
     }
@@ -46,7 +46,7 @@ class ComicsController extends Controller
                 'title'=> 'required|max:100|unique:comics',
                 'description'=> 'required',
                 'thumb'=> 'required|url|unique:comics',
-                'price'=> 'required|integer',
+                'price'=> 'required',
                 'series'=> 'required|max:100',
                 'sale_date'=> 'required|date',
                 'type'=> 'required|max:100',
@@ -76,7 +76,6 @@ class ComicsController extends Controller
      */
     public function show(Comic $comic)
     {
-
         // passando il Model riferito all'entità più una variabile si va a sostituire la scrittura con il findOrFail() -> struttura rivisitata -> "id" passato dalla rotta
         return view('pages.comics.show', compact('comic'));
     }
@@ -104,10 +103,10 @@ class ComicsController extends Controller
         // VALIDAZIONE BACK-END
         $request->validate(
             [
-                'title'=> 'required|max:100|unique:comics',
+                'title'=> 'required|max:100',
                 'description'=> 'required',
-                'thumb'=> 'required|url|unique:comics',
-                'price'=> 'required|integer',
+                'thumb'=> 'required|url',
+                'price'=> 'required',
                 'series'=> 'required|max:100',
                 'sale_date'=> 'required|date',
                 'type'=> 'required|max:100',
